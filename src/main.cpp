@@ -127,22 +127,22 @@ void resetAfterDelay(){
     allOn();
     if (DEBUG) { DEBUG_SERIAL.println("ALL RELAY ON"); }
   } 
-  if (currentMillis - lastPressTime_2 == RESET_TIME) {
+  else if (currentMillis - lastPressTime_2 == RESET_TIME) {
     allOn();
     if (DEBUG) { DEBUG_SERIAL.println("ALL RELAY ON"); }
   }
-  if (currentMillis - lastPressTime_3 == RESET_TIME) {
+  else if (currentMillis - lastPressTime_3 == RESET_TIME) {
     allOn();
     if (DEBUG) { DEBUG_SERIAL.println("ALL RELAY ON"); }
   }
-  if (currentMillis - lastPressTime_4 == RESET_TIME) {
+  else if (currentMillis - lastPressTime_4 == RESET_TIME) {
     allOn();
     if (DEBUG) { DEBUG_SERIAL.println("ALL RELAY ON"); }
   }
 
 }
 
-
+// Process the data recieved from the serial
 
 void process_data(String data){
   if (data == STOP_COMMAND){
