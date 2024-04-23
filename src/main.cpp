@@ -23,6 +23,8 @@
 #define SWITCH_4_COMMAND "D"
 
 #define STOP_COMMAND "Z"
+#define START_COMMAND "S"
+
 
 #define DEBOUNCE_TIME 250
 #define RESET_TIME 20000
@@ -146,7 +148,11 @@ void process_data(String data){
   if (data == STOP_COMMAND){
     allOff();
     if (DEBUG) { DEBUG_SERIAL.println("ALL LIGHT OFF"); }
-  } 
+  }
+  if (data == START_COMMAND){
+    allOn();
+    if (DEBUG) { DEBUG_SERIAL.println("ALL LIGHT ON"); }
+  }
 }
 
 void readSerial(){
@@ -171,6 +177,5 @@ void loop() {
   readSerial();
   buttonCheck();
   resetAfterDelay();
-  
  
 }
