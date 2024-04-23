@@ -176,6 +176,6 @@ void loop() {
   
   readSerial();
   buttonCheck();
-  resetAfterDelay();
+  // resetAfterDelay();
  
 }
